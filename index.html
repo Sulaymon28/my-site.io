@@ -1,57 +1,69 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
-    <title>Лабораторная работа №2.1</title>
-    <link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <div class="header__logo"><img src="" alt="Картинки нету"></div>
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li>
-                        <a href="">Главная</a>
-                    </li></ul>
-                 <ul class="nav__list">
-                    <li>
-                        <a href="">О нас</a>
-                    </li></ul>
-                  <ul class="nav__list">
-                    <li>
-                        <a href="">Услуги</a>
-                    </li></ul>
-                   <ul class="nav__list">
-                    <li>
-                        <a href="">Контакты</a>
-                    </li></ul>
-            </nav>
-        </header>
-       <main class="main">
-        <div class="main__title">Добро пожаловать на наш сайт!</div>
-         <p>Мы создаем красивые и функциональные сайты</p>
-           <a href="">Узнать больше</a>
-            <div class="main__subtitle">Наши преимущества
-               </div>
-                 <div class="main__description">Качество</div>
-                    <p>Мы используем только лучшие технологии и подходы</p>
-                    <div class="main__description">Надежность
-                        </div>
-                        <p>Наши продукты работают безотказно долгие годы</p> 
-                           <div class="main__description">Поддержка</div>
-                               <p>Мы всегда готовы помочь нашим клиентам</p>
-         </main>
-       <footer class="footer">
-          <div class="footer__title">О нас</div>
-          <div class="footer__info">
-            <p>Мы молодая и динамично развивающаяся компания, специализирующаяся на веб-разработке. Наша команда состоит из профессионалов своего дела.</p>
-            <p>Мы любим то, что делаем, и делаем это хорошо!</p>
-            <p>Первая лаб по фронтенду.</p>
-          </div>
-          <div class="footer__info--developer">студент третьего курса группы 2.309-1 <strong>Баротов Сулаймон Иброхимович</strong></div>
-       </footer>
+	<div class="wrapper">
+		<div class="form">
+			<form id="form" action="#" class="form__body">
+			  <h1 class="form__title">Отправка данных на почту</h1>	
+			  <div class="form__item">
+				<label for="formName" class="form__label">Имя*</label>
+				<input type="text" id="formName" name="name" class="form__input _req">
+			  </div>
+			  <div class="form__item">
+				<label for="formEmail" class="form__label">E-mail*</label>
+				<input type="text" id="formEmail" name="email" class="form__input _req _email">
+			  </div>
+			  <div class="form__item">
+				<div class="form__title form__title--hand">Левша или правша?</div>
+				<div class="options">
+					<div class="options__item">
+						<input type="radio" checked id="formRightHanded" class="options__input" name="hand" value="right">
+						<label for="formRightHanded" class="options__label"><span>Правша</span></label>
+					</div>
+					<div class="options__item">
+						<input type="radio" id="formLeftHanded" class="options__input" name="hand" value="left">
+						<label for="formLeftHanded" class="options__label"><span>Левша</span></label>
+					</div>
+				</div>
+			  </div>
+			   <div class="form__item">
+				<label for="formMessage" class="form__label">Сообшение:</label>
+				<textarea id="formMessage" name="message" class="form__input"></textarea>
+			  </div>
+			  <div class="form__item">
+				<div class="form__label">Возраст</div>
+				<select name="age" id="select" class="form__select">
+					<option value="от 18 до 25">Молодой</option>
+					<option value="от 25 до 40">Старый</option>
+					<option value="от 40">Супер стар</option>
+				</select>
+			  </div>
+			  <div class="form__item">
+				<div class="form__label">Прикрепить фото</div>
+				<div class="file">
+					<div class="file__item">
+						<input accept=".jpeg, .png, .gif" id="formImage" type="file" name="image" class="file__input">
+						<div class="file__button">Выбрать</div>
+					</div>
+					<div id="formPreview" class="file__preview"></div>
+				</div>
+			  </div>
+			  <div class="form__item">
+				<div class="checkbox">
+					<input checked type="checkbox" name="agreement" id="formAgreement" class="checkbox__input _req"><label for="formAgreement" class="checkbox__label"><span>Я даю свое согласие на обработку персоналные данных в соответствие с <a href="">Условие*</a></span></label>
+					
+				</div>
+			  </div>
+			  <button class="form__button">Отправить</button>
+			</form>
+		</div>
+	</div>
+	<script src="js/javaScript.js" defer></script>
 </body>
-
 </html>
